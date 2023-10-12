@@ -11,7 +11,7 @@ void copy(char from[], char to[]);
 int main()
 {
 	int len;
-        int max_lengths[MAXLINE];
+    int max_lengths[MAXLINE];
 
 	while (fgets(lines[line_count],MAXLINE,stdin) != NULL) {
 		len = strlen(lines[line_count]);
@@ -39,11 +39,11 @@ int main()
 	for(int i = 0; i < line_count; i++) {
 		for(int j = 0; j < line_count; j++){
 			if(max_lengths[i] == line_lengths[j]) {
-					printf("%s", lines[j]);
+					printf("%s", line[j]);
 					break;
 			}
 		}
 	}
 
 	return 0;
-}
+}	
