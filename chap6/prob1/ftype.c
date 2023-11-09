@@ -6,29 +6,28 @@
 
 int main(int argc, char *argv[])
 { 
-   int i;
-   struct stat buf;
-   for (i = 1; i < argc; i++) {
-      printf("%s: ", argv[i]);
-      if (lstat(argv[i], &buf) < 0) {
-         perror("lstat()"); 
-         continue;
-      }
-      if (S_ISREG(buf.st_mode)) 
-         printf("%s \n", "일반 파일");
-      if (S_ISDIR(buf.st_mode)) 
-         printf("%s \n", "Directory");
-      if (S_ISCHR(buf.st_mode)) 
-         printf("%s \n", "문자 장치 파일");
-      if (S_ISBLK(buf.st_mode)) 
-         printf("%s \n", "블록 장치 파일");
-      if (S_ISFIFO(buf.st_mode)) 
-         printf("%s \n", "FIFO 파일");
-      if (S_ISLNK(buf.st_mode)) 
-         printf("%s \n", "Symbolic link");
-      if (S_ISSOCK(buf.st_mode)) 
-         printf("%s \n", "소켓");
-   }
-   exit(0);
+	int i;
+	struct stat buf;
+	for (i = 1; i < argc; i++) {
+		printf("%s: ", argv[i]);
+		if (lstat(argv[i], &buf) < 0) {
+			perror("lstat()"); 
+			continue;
+		}
+		if (S_ISREG(buf.st_mode)) 
+			printf("%s \n", "General file");
+		if (S_ISDIR(buf.st_mode)) 
+			printf("%s \n", "Directory");
+		if (S_ISCHR(buf.st_mode)) 
+			printf("%s \n", "Text Device File");
+		if (S_ISBLK(buf.st_mode)) 
+			printf("%s \n", "Block Device File");
+		if (S_ISFIFO(buf.st_mode)) 
+			printf("%s \n", "FIFO File");
+		if (S_ISLNK(buf.st_mode)) 
+			printf("%s \n", "Symbolic link");
+		if (S_ISSOCK(buf.st_mode)) 
+			printf("%s \n", "Socket");
+	}
+	 exit(0);
 }
-
