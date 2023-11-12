@@ -19,7 +19,11 @@ else dir = argv[1];
  perror(dir);
 
  while ((d = readdir(dp)) != NULL)
+<<<<<<< HEAD
       printf("%s %lu \n", d->d_name, d->d_ino);
+=======
+      printf("%s %lu \n", d->d_name, d->d_ino);
+>>>>>>> 50781dc (c)
 
   closedir(dp);
   exit(0);
