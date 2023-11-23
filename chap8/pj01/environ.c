@@ -21,12 +21,12 @@ int main(int argc, char *argv[])
 	}
 	if(argc > 1 && argv[1][0] == '-'){
 		if (argv[1][1] == 'u') {
-			printf("My Realistic User ID : %d\n", getuid());
-			printf("My Vaild User ID : %d\n", geteuid());
+			printf("My Realistic User ID : %d(ppos2eun)\n", getuid());
+			printf("My Vaild User ID : %d(ppos2eun)\n", geteuid());
 		}
 		else if(argv[1][1] == 'g'){
-			printf("My Realistic Group ID : %d\n", getgid());
-			printf("My Vaild Group ID : %d\n", getegid());
+			printf("My Realistic Group ID : %d(ppos2eun)\n", getgid());
+			printf("My Vaild Group ID : %d(ppos2eun)\n", getegid());
 		}
 	}
 
